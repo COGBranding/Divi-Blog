@@ -1,1 +1,64 @@
-
+.blog{
+  
+  &__posts{
+    
+    .et_pb_post{
+      padding: 0;
+      border: none;
+      
+      &:hover{
+        transition: all 0.2s ease;
+        
+        h2, a{
+          color: $blue !important;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+    
+    .et_pb_image_container{
+      margin: -20px 0 29px;
+    }
+    
+    // Blog Post Title
+    h2{
+      font-size: 1.625rem;
+      color: $black !important;
+      padding-bottom: 20px;
+      
+      @media (max-width: 767px){
+        font-size: 1.5rem;
+      }
+    }
+    
+    // Meta (Excerpt)
+    p{
+      font-size: 1.125rem; // Update with desktop <p> size
+      color: $black !important;
+      margin-bottom: 30px;
+      
+      @media (max-width: 767px){
+        font-size: 1rem; // Update with mobile <p> size
+      }
+    }
+    
+    a{
+      transition: all 0.2s ease;
+      
+      &.more-link{
+        font-size: 0.9375rem;
+        color: $black;
+        text-transform: capitalize;
+        
+        &::after{
+          content: '\24';
+          font-family: "ETmodules";
+          padding-left: 16px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+    
